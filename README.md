@@ -12,10 +12,10 @@ With docker-compose:
 ```
   homebridge:
     restart: always
-    image: jharmon/docker-homebridge-homeassistant
+    image: daxingplay/homebridge-homeassistant
     net: host
     volumes:
-      - ./homebridge_config:/root # contains .homebridge + .homebridge/config.json
+      - ./homebridge_config:/root/.homebridge # contains config.json
       - /etc/localtime:/etc/localtime 
     ports:
       - "5353:5353"
